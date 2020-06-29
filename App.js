@@ -1,0 +1,38 @@
+import React from 'react'
+import { HashRouter as Router, Route, Switch } from 'react-router-dom'
+import Loadable from './component/Loadable'
+import NavWrapper from 'component/NavWrapper'
+
+class App extends React.Component {
+	constructor(props) {
+		super(props)
+	}
+
+	render() {
+		return (
+			<Router>
+				<Switch>
+					
+					<Route exact path='/login' component={Loadable({ loader: () => import('./app/login') })}   />
+					<Route path='/' render={() => (
+						<div className='app-root'>
+							<NavWrapper>
+								<Switch>
+									<Route exact path='/'      component={Loadable({ loader: () => import('./app/card')})}  />
+									
+									<Route exact path='/cal'   component={Loadable({ loader: () => import('./app/cal')})}  />
+									{/* <Route exact path='/dish'   component={Loadable({ loader: () => import('./app/dish')})}  />
+									<Route exact path='/audit'   component={Loadable({ loader: () => import('./app/audit')})}  />
+									<Route exact path='/conf'  component={Loadable({ loader: () => import('./app/conf')})}  />
+									<Route exact path='/cset'  component={Loadable({ loader: () => import('./app/conf/cset')})}  /> */}
+								</Switch>
+							</NavWrapper>
+						</div>
+					)}/>
+				</Switch>
+			</Router>
+		)
+	}
+}
+
+export default App

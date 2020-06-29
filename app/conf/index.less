@@ -1,0 +1,157 @@
+.g-main {
+  padding: 0;
+  background: #eeeeee;
+  height: 100vh;
+  .m-head {
+    background-color: #259375;
+    padding: 10px;
+    height: 50px;
+    text-align: center;
+    position: relative;
+
+    .head-title{   
+      font-size:20px;
+      
+    }
+  }
+  .m-hd {
+    display: flex;
+
+    background: #fff;
+    padding: 15px;
+    border-bottom: 1px solid #e6e6e6;
+
+    .m-face {
+      margin-right: 20px;
+
+      & > img {
+        display: block;
+        width: 84px;
+        height: 84px;
+        background: #666;
+      }
+    }
+
+    .m-hd-info {
+      display: flex;
+      flex-direction: column;
+      padding: 5px 0;
+      justify-content: space-between;
+
+      .m-name {
+        position: relative;
+        top: 10px;
+        font-size: 28px;
+        color: #333;
+      }
+    }
+  }
+
+  .m-bd {
+    background: #fff;
+    display: flex;
+    font-size: large;
+    flex-direction: column;
+    padding: 15px 15px 10px 15px;
+    margin-top: 10px;
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+
+    .m-info + .m-info {
+      margin-top: 10px;
+    }
+
+    .m-info {
+      display: flex;
+      flex-direction: column;
+
+      .m-title {
+        border-bottom: 1px solid #666;
+        margin-bottom: 5px;
+
+        span {
+          display: inline-block;
+          background: #666;
+          color: #fff;
+          padding: 0 30px;
+        }
+      }
+    }
+
+    .m-row {
+      margin: 3px 0;
+      display: flex;
+
+      .m-col + .m-col {
+        margin-left: 15px;
+      }
+
+      .m-col {
+        flex: 1;
+        display: flex;
+        align-items: flex-end;
+        color: #b9b9b9 ;
+
+        .m-val-wrap {
+          flex: 1;
+          text-align: right;
+
+          span {
+            display: inline-block;
+          }
+
+          .m-mul-hd {
+            font-size: 20px;
+            color: #be0000;
+            font-weight: bold;
+            width: 45px;
+            text-align: right;
+          }
+
+          .m-mul-sep {
+            width: 10px;
+            text-align: center;
+          }
+
+          .m-mul-mid {
+            color: #259375;
+            width: 30px;
+            text-align: right;
+          }
+
+          .m-mul-bd {
+            color: #259375;
+          }
+
+          .m-mul-unit {
+            margin: 0px 10px 0px 10px;
+            font-weight: bold;
+            color: #b9b9b9 ;
+          }
+        }
+      }
+    }
+  }
+
+  .m-group {
+    margin: 10px 0;
+    border-bottom: 1px solid #e6e6e6;
+    border-top: 1px solid #e6e6e6;
+  }
+
+  .m-menu + .m-menu {
+    border-top: 1px solid #e6e6e6;
+  }
+
+  .m-menu {
+    padding: 8px;
+    font-size: 20px;
+    background: #fff;
+    text-align: center;
+    color: #259375;
+  }
+
+  .m-last {
+    margin-top: 50px;
+  }
+}
